@@ -16,4 +16,4 @@ php artisan migrate --force
 
 # Seed the database only if the users table is empty
 echo "Checking if database needs seeding..."
-php artisan tinker --execute="if (\App\Models\User::count() === 0) { Illuminate\Support\Facades\Artisan::call('db:seed', ['--force' => true]); echo 'Database seeded successfully!'; } else { echo 'Database already seeded.'; }"
+php scripts/seed-if-empty.php
