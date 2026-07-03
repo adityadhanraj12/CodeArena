@@ -1,6 +1,8 @@
 # CodeArena 🏆
 
-CodeArena is a modern, full-featured **Quiz and Multiple Choice Question (MCQ) Platform** built using Laravel 12, TailwindCSS, and PostgreSQL. It allows users to browse quiz categories, search for active quizzes, test their coding knowledge, and automatically receive downloadable PDF certificates upon successful completion. It also features a robust Admin Dashboard to manage questions, categories, and quizzes.
+**Live Application**: [https://codearena-oo1b.onrender.com](https://codearena-oo1b.onrender.com)
+
+CodeArena is a modern, full-featured **Quiz and Multiple Choice Question (MCQ) Platform** built using Laravel 12, TailwindCSS, and MySQL. It allows users to browse quiz categories, search for active quizzes, test their coding knowledge, and automatically receive downloadable PDF certificates upon successful completion. It also features a robust Admin Dashboard to manage questions, categories, and quizzes.
 
 ---
 
@@ -26,7 +28,7 @@ CodeArena is a modern, full-featured **Quiz and Multiple Choice Question (MCQ) P
 
 - **Backend**: PHP 8.2+ & [Laravel 12](https://laravel.com)
 - **Frontend**: [TailwindCSS v4](https://tailwindcss.com), Vite, Blade Templates, JavaScript (Axios)
-- **Database**: SQLite (Local Development) / PostgreSQL (Production via [Aiven.io](https://aiven.io))
+- **Database**: SQLite (Local Development) / MySQL (Production via [Aiven.io](https://aiven.io))
 - **PDF Engines**: [Spatie Browsershot](https://github.com/spatie/browsershot) & [Puppeteer](https://pptr.dev) (Headless Chromium)
 - **Deployment Hosting**: [Render.com](https://render.com) (Docker Runtime)
 
@@ -46,7 +48,7 @@ Ensure you have the following installed on your system:
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/your-username/CodeArena.git
+git clone https://github.com/adityadhanraj12/CodeArena.git
 cd CodeArena
 ```
 
@@ -103,17 +105,11 @@ php artisan serve
 
 CodeArena is configured for containerized deployment using Docker.
 
-1. **Database**: Create a free **PostgreSQL** instance on [Aiven.io](https://aiven.io) and get your connection string.
+1. **Database**: Create a free **MySQL** instance on [Aiven.io](https://aiven.io). Download the project's **CA Certificate (`ca.pem`)** and place it in the project root folder.
 2. **Web Service**: Deploy the repository on **Render** as a **Docker** service.
 3. **Environment Variables**:
-   - `DB_CONNECTION=pgsql`
-   - `DATABASE_URL=postgres://avnadmin:yourpassword@host:port/defaultdb?sslmode=require`
-   - `DB_SSLMODE=require`
+   - `DB_CONNECTION=mysql`
+   - `DATABASE_URL=mysql://avnadmin:yourpassword@host:port/defaultdb?ssl-mode=REQUIRED`
    - `APP_KEY`=(your local `.env` app key)
    - `APP_ENV=production`
    - `APP_DEBUG=false`
-
----
-
-## 📄 License
-This project is open-sourced software licensed under the [MIT license](LICENSE).
