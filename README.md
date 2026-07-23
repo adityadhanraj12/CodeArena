@@ -1,6 +1,6 @@
 # CodeArena 🏆
 
-**Live Application**: [https://codearena-oo1b.onrender.com](https://codearena-oo1b.onrender.com)
+**Live Application**: [https://codearena-wmng.onrender.com](https://codearena-wmng.onrender.com)
 
 CodeArena is a modern, full-featured **Quiz and Multiple Choice Question (MCQ) Platform** built using Laravel 12, TailwindCSS, and MySQL. It allows users to browse quiz categories, search for active quizzes, test their coding knowledge, and automatically receive downloadable PDF certificates upon successful completion. It also features a robust Admin Dashboard to manage questions, categories, and quizzes.
 
